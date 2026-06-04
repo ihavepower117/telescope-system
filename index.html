@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천문대 망원경 시스템</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🔭 전북과학고 천문대 망원경 시스템</h1>
+
+    <!-- ===================== -->
+    <!-- 망원경 상태 -->
+    <!-- ===================== -->
+    <div id="telescopes">
+
+        <div class="card">
+            <h2>PlaneWave CDK17</h2>
+
+            <p id="status1"></p>
+            <p id="current1"></p>
+
+            <input id="startId1" placeholder="학번">
+            <input id="startName1" placeholder="이름">
+            <button onclick="startUse(1)">사용 시작</button>
+
+            <br><br>
+
+            <input id="endId1" placeholder="학번 (종료)">
+            <input id="endName1" placeholder="이름 (종료)">
+            <button onclick="finishUse(1)">사용 종료</button>
+        </div>
+
+        <div class="card">
+            <h2>PlaneWave CDK12.5</h2>
+
+            <p id="status2"></p>
+            <p id="current2"></p>
+
+            <input id="startId2" placeholder="학번">
+            <input id="startName2" placeholder="이름">
+            <button onclick="startUse(2)">사용 시작</button>
+
+            <br><br>
+
+            <input id="endId2" placeholder="학번 (종료)">
+            <input id="endName2" placeholder="이름 (종료)">
+            <button onclick="finishUse(2)">사용 종료</button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- ===================== -->
+    <!-- 오늘 로그 -->
+    <!-- ===================== -->
+    <h2>📜 오늘 사용 기록</h2>
+
+    <h4>CDK17</h4>
+    <div id="log1"></div>
+
+    <h4>CDK12.5</h4>
+    <div id="log2"></div>
+
+    <hr>
+
+    <!-- ===================== -->
+    <!-- 날짜 필터 (완전히 분리) -->
+    <!-- ===================== -->
+    <h2>📅 날짜별 기록 조회</h2>
+
+    <input type="date" id="datePicker">
+    <button onclick="filterByDate()">조회</button>
+    <button onclick="loadHistory()">초기화</button>
+
+    <div id="historySection">
+        <h3>📊 조회 결과</h3>
+
+        <h4>CDK17</h4>
+        <div id="history1"></div>
+
+        <h4>CDK12.5</h4>
+        <div id="history2"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

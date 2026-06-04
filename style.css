@@ -1,0 +1,113 @@
+/* 전체 */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+/* 제목 */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 컨테이너 */
+#telescopes {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 카드 */
+.card {
+    background: white;
+
+    width: 100%;
+    max-width: 480px;
+
+    padding: 32px; /* 🔥 핵심: 내부 여백 증가 */
+
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* 상태 */
+#status1, #status2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 입력칸 */
+input {
+    width: 100%;
+
+    padding: 12px; /* 🔥 더 넉넉하게 */
+    margin: 8px 0; /* 🔥 위아래 간격 증가 */
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    box-sizing: border-box; /* 🔥 중요: 넘침 방지 */
+}
+
+/* 버튼 */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 시작 */
+button:nth-of-type(1) {
+    background: #2ecc71;
+    color: white;
+}
+
+/* 종료 */
+button:nth-of-type(2) {
+    background: #e74c3c;
+    color: white;
+}
+
+/* 로그 */
+#log1, #log2, #history1, #history2 {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* 구분선 */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* 날짜 영역 */
+#historySection {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+
+    max-width: 1000px;
+    margin: 20px auto 0;
+}   
